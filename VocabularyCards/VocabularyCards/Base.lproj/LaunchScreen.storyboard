@@ -16,6 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="c7j-nC-PZx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vocabulary Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bN2-Bb-ICx">
                                 <rect key="frame" x="20" y="400.5" width="374" height="95"/>
                                 <constraints>
@@ -28,9 +31,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="c7j-nC-PZx" secondAttribute="bottom" id="AeS-hn-fHR"/>
                             <constraint firstItem="bN2-Bb-ICx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RTA-6o-OlD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bN2-Bb-ICx" secondAttribute="trailing" constant="20" id="VEI-B7-eDf"/>
                             <constraint firstItem="bN2-Bb-ICx" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ZtI-Wb-MU0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c7j-nC-PZx" secondAttribute="trailing" id="dk5-N1-szI"/>
+                            <constraint firstItem="c7j-nC-PZx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jsJ-qz-QgE"/>
+                            <constraint firstItem="c7j-nC-PZx" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="yeD-NP-NhD"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -40,6 +47,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
