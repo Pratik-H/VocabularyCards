@@ -24,21 +24,41 @@ class WordInfoView: UIView {
         speechUtterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
         self.speechSynthesizer.speak(speechUtterance)
     }
-    @IBOutlet weak var wordLabel: UILabel!
+    @IBOutlet weak var wordLabel: UILabel! {
+        didSet {
+            if #available(iOS 13.0, *) {
+                if self.traitCollection.userInterfaceStyle == .dark {
+                    wordLabel.textColor = .black
+                } else {
+                    wordLabel.textColor = .black
+                }
+            }
+        }
+    }
     
-    @IBOutlet weak var meaningLabel: UILabel!
+    @IBOutlet weak var meaningLabel: UILabel! {
+        didSet {
+            if #available(iOS 13.0, *) {
+                if self.traitCollection.userInterfaceStyle == .dark {
+                    meaningLabel.textColor = .black
+                } else {
+                    meaningLabel.textColor = .black
+                }
+            }
+        }
+    }
     
-//    var something: Spea
+    // MARK: - Parameters
     let speechSynthesizer = AVSpeechSynthesizer()
+    
     // MARK: - Methods
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        layer.cornerRadius = 10
     }
     
     init() {
         super.init(frame: CGRect.zero)
         layer.cornerRadius = 10
     }
-    
-    
 }
