@@ -1,0 +1,36 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+def available_pods
+pod "Koloda", '5.0.1'
+end
+
+target 'VocabularyCards' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  available_pods
+  # Pods for VocabularyCards
+	
+  target 'VocabularyCardsTests' do
+    inherit! :search_paths
+    # Pods for testing
+    available_pods
+  end
+
+  target 'VocabularyCardsUITests' do
+    # Pods for testing
+    available_pods
+  end
+
+end
+
+# MAKR: - Debug
+
+target 'VocabularyCardsDebug' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  
+  # Pods for Go2Share
+  available_pods
+end
+
