@@ -21,16 +21,14 @@ class WordInfoView: UIView {
     
     @IBAction func speakButtonAction(_ sender: UIButton) {
         let speechUtterance = AVSpeechUtterance(string: wordLabel.text ?? "")
-        speechUtterance.rate = 0.5
-        speechUtterance.pitchMultiplier = 0.25
-        speechUtterance.volume = 0.75
-        speechUtterance.voice = AVSpeechSynthesisVoice(identifier: "Karen")
+        speechUtterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
         self.speechSynthesizer.speak(speechUtterance)
     }
     @IBOutlet weak var wordLabel: UILabel!
     
     @IBOutlet weak var meaningLabel: UILabel!
     
+//    var something: Spea
     let speechSynthesizer = AVSpeechSynthesizer()
     // MARK: - Methods
     required init?(coder aDecoder: NSCoder) {
