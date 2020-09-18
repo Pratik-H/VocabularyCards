@@ -9,6 +9,7 @@
 
 import UIKit
 import AVFoundation
+import Lottie
 
 class WordInfoView: UIView {
     
@@ -19,10 +20,13 @@ class WordInfoView: UIView {
         }
     }
     
-    @IBAction func speakButtonAction(_ sender: UIButton) {
-        let speechUtterance = AVSpeechUtterance(string: wordLabel.text ?? "")
-        speechUtterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
-        self.speechSynthesizer.speak(speechUtterance)
+    @IBOutlet var likeView: AnimationView! {
+        didSet {
+            likeView.layer.cornerRadius = likeView.frame.height / 2
+            likeView.backgroundColor = .clear
+            likeView.loopMode = .playOnce
+            likeView.contentMode = .scaleAspectFill
+        }
     }
     @IBOutlet weak var wordLabel: UILabel! {
         didSet {
@@ -48,8 +52,51 @@ class WordInfoView: UIView {
         }
     }
     
+    // MARK: - IBAction
+    @IBAction func likeViewAction(_ sender: UITapGestureRecognizer) {
+        if isButtonSelected == true {
+            animationStartStop = .stop
+            isButtonSelected = false
+            likeView.play(fromFrame: animationStartStop.rawValue.startFrame, toFrame: animationStartStop.rawValue.endFrame, loopMode: .playOnce, completion: {_ in
+                /// - TODO: Add to dataBase
+            })
+
+        } else {
+            isButtonSelected = true
+            animationStartStop = .start
+            likeView.play(fromFrame: animationStartStop.rawValue.startFrame, toFrame: animationStartStop.rawValue.endFrame, loopMode: .playOnce, completion: { _ in
+                /// - TODO: remove from dataBase
+            })
+        }
+    }
+    
+    
+    @IBAction func speakButtonAction(_ sender: UIButton) {
+        let speechUtterance = AVSpeechUtterance(string: wordLabel.text ?? "")
+        speechUtterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+        self.speechSynthesizer.speak(speechUtterance)
+    }
+    
+   
     // MARK: - Parameters
     let speechSynthesizer = AVSpeechSynthesizer()
+    var isButtonSelected: Bool = false
+    
+    enum AnimationStartStopValues {
+        case start
+        case stop
+        
+        var rawValue: (startFrame: CGFloat, endFrame: CGFloat) {
+            switch self {
+                case .start:
+                return (CGFloat(0), CGFloat(72))
+                case .stop:
+                return (CGFloat(0), CGFloat(0))
+            }
+        }
+    }
+    
+    var animationStartStop: AnimationStartStopValues = .stop
     
     // MARK: - Methods
     required init?(coder aDecoder: NSCoder) {

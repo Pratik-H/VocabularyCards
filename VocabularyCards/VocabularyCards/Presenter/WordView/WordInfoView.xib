@@ -48,14 +48,31 @@
                                 <action selector="speakButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="yp9-ze-gkM"/>
                             </connections>
                         </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Akn-ec-ar6" customClass="AnimationView" customModule="Lottie">
+                            <rect key="frame" x="10" y="10" width="40" height="40"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="7JA-D7-F1x"/>
+                                <constraint firstAttribute="width" secondItem="Akn-ec-ar6" secondAttribute="height" multiplier="1:1" id="nxC-De-CMF"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="Like"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="osc-hg-51P" appends="YES" id="kri-DY-isg"/>
+                            </connections>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="TG4-8L-9ww" firstAttribute="leading" secondItem="3Cl-nR-5Zn" secondAttribute="leading" constant="20" id="2pN-jm-KMt"/>
                         <constraint firstAttribute="trailing" secondItem="TG4-8L-9ww" secondAttribute="trailing" constant="20" id="3qZ-ji-xIv"/>
                         <constraint firstItem="0eI-Jz-lGn" firstAttribute="centerX" secondItem="3Cl-nR-5Zn" secondAttribute="centerX" id="8H9-Jl-Qf7"/>
+                        <constraint firstItem="Akn-ec-ar6" firstAttribute="top" secondItem="3Cl-nR-5Zn" secondAttribute="top" constant="10" id="DWX-Qz-aOb"/>
                         <constraint firstItem="Ais-FY-mUf" firstAttribute="top" secondItem="3Cl-nR-5Zn" secondAttribute="top" constant="10" id="Dwy-oU-bhC"/>
                         <constraint firstAttribute="bottom" secondItem="TG4-8L-9ww" secondAttribute="bottom" constant="10" id="KZI-Li-pWH"/>
+                        <constraint firstItem="Akn-ec-ar6" firstAttribute="leading" secondItem="3Cl-nR-5Zn" secondAttribute="leading" constant="10" id="WoM-jb-DKF"/>
                         <constraint firstItem="TG4-8L-9ww" firstAttribute="top" secondItem="0eI-Jz-lGn" secondAttribute="bottom" constant="30" id="enM-eT-pMi"/>
                         <constraint firstItem="0eI-Jz-lGn" firstAttribute="top" secondItem="3Cl-nR-5Zn" secondAttribute="top" constant="40" id="fuy-oK-Yg9"/>
                         <constraint firstAttribute="trailing" secondItem="Ais-FY-mUf" secondAttribute="trailing" constant="10" id="q8M-tP-BVF"/>
@@ -72,12 +89,21 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="containerView" destination="3Cl-nR-5Zn" id="gFd-LW-aUa"/>
+                <outlet property="likeView" destination="Akn-ec-ar6" id="cZT-84-6MI"/>
                 <outlet property="meaningLabel" destination="TG4-8L-9ww" id="Ne1-dG-baR"/>
                 <outlet property="wordLabel" destination="0eI-Jz-lGn" id="TzF-ui-h0r"/>
             </connections>
             <point key="canvasLocation" x="176.81159420289856" y="58.59375"/>
         </view>
+        <tapGestureRecognizer id="osc-hg-51P">
+            <connections>
+                <action selector="likeViewAction:" destination="iN0-l3-epB" id="48O-5y-qe9"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
+    <designables>
+        <designable name="Akn-ec-ar6"/>
+    </designables>
     <resources>
         <image name="speaker.2" catalog="system" width="128" height="90"/>
         <systemColor name="systemBackgroundColor">

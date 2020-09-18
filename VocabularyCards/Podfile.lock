@@ -1,20 +1,24 @@
 PODS:
   - Koloda (5.0.1):
     - pop (~> 1.0)
+  - lottie-ios (3.1.8)
   - pop (1.0.12)
 
 DEPENDENCIES:
   - Koloda (= 5.0.1)
+  - lottie-ios
 
 SPEC REPOS:
   trunk:
     - Koloda
+    - lottie-ios
     - pop
 
 SPEC CHECKSUMS:
   Koloda: d07b9199a383abc5898b62aa945a599f5e7c0c4b
+  lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
 
-PODFILE CHECKSUM: 07c7d127e311208d3dc69e4f50067b5acd9cadd0
+PODFILE CHECKSUM: 7c4c3a5f994ef3cedacc589d38db144a90c3eabe
 
 COCOAPODS: 1.9.3

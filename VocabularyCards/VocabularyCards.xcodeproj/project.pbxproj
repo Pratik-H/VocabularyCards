@@ -69,6 +69,8 @@
 		929002D02512F81400A9BED8 /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 929002CC2512F81400A9BED8 /* Lobster-Regular.ttf */; };
 		929002D12512F81400A9BED8 /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 929002CC2512F81400A9BED8 /* Lobster-Regular.ttf */; };
 		929002D22512F81400A9BED8 /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 929002CC2512F81400A9BED8 /* Lobster-Regular.ttf */; };
+		92D151E6251531D2008D75DE /* Like.json in Resources */ = {isa = PBXBuildFile; fileRef = 92D151E5251531D1008D75DE /* Like.json */; };
+		92D151E7251531D2008D75DE /* Like.json in Resources */ = {isa = PBXBuildFile; fileRef = 92D151E5251531D1008D75DE /* Like.json */; };
 		92D6B4222512AD15001C7318 /* WordInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D6B4212512AD15001C7318 /* WordInfoView.swift */; };
 		92D6B4232512AD15001C7318 /* WordInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D6B4212512AD15001C7318 /* WordInfoView.swift */; };
 		92D6B4242512AD15001C7318 /* WordInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D6B4212512AD15001C7318 /* WordInfoView.swift */; };
@@ -137,6 +139,7 @@
 		929002C62512F64A00A9BED8 /* VocabularyCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyCardsViewController.swift; sourceTree = "<group>"; };
 		929002CB2512F81400A9BED8 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		929002CC2512F81400A9BED8 /* Lobster-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster-Regular.ttf"; sourceTree = "<group>"; };
+		92D151E5251531D1008D75DE /* Like.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Like.json; sourceTree = "<group>"; };
 		92D6B4212512AD15001C7318 /* WordInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordInfoView.swift; sourceTree = "<group>"; };
 		92D6B4252512AD1D001C7318 /* WordInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordInfoView.xib; sourceTree = "<group>"; };
 		92D6B42B2512AF78001C7318 /* Extension+UIViiew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViiew.swift"; sourceTree = "<group>"; };
@@ -403,6 +406,7 @@
 		92D6B42F2512B5C8001C7318 /* JSONData */ = {
 			isa = PBXGroup;
 			children = (
+				92D151E5251531D1008D75DE /* Like.json */,
 				92D6B4302512B613001C7318 /* WordDataBase.json */,
 			);
 			path = JSONData;
@@ -562,6 +566,7 @@
 				925AB62325129AFF0076819F /* LaunchScreen.storyboard in Resources */,
 				929002A22512C8E800A9BED8 /* NotoSansSC-Medium.otf in Resources */,
 				925AB62025129AFF0076819F /* Assets.xcassets in Resources */,
+				92D151E6251531D2008D75DE /* Like.json in Resources */,
 				929002CD2512F81400A9BED8 /* OFL.txt in Resources */,
 				925AB61E25129AFC0076819F /* Main.storyboard in Resources */,
 				929002AB2512C8E800A9BED8 /* NotoSansSC-Bold.otf in Resources */,
@@ -608,6 +613,7 @@
 				925AB64D25129BBC0076819F /* LaunchScreen.storyboard in Resources */,
 				929002A32512C8E800A9BED8 /* NotoSansSC-Medium.otf in Resources */,
 				925AB64E25129BBC0076819F /* Assets.xcassets in Resources */,
+				92D151E7251531D2008D75DE /* Like.json in Resources */,
 				929002CE2512F81400A9BED8 /* OFL.txt in Resources */,
 				925AB64F25129BBC0076819F /* Main.storyboard in Resources */,
 				929002AC2512C8E800A9BED8 /* NotoSansSC-Bold.otf in Resources */,
