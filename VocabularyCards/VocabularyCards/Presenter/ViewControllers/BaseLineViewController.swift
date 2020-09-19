@@ -42,6 +42,7 @@ class BaseLineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadWords()
+        print(RealmHelper.shared.getWords().map{$0.word})
         self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
     }
     
@@ -65,8 +66,7 @@ class BaseLineViewController: UIViewController {
 extension  BaseLineViewController:  KolodaViewDelegate, KolodaViewDataSource {
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         let wordInfoView: WordInfoView = .fromNib()
-        wordInfoView.wordLabel.text = wordKeys?[index].capitalizingFirstLetter()
-        wordInfoView.meaningLabel.text = wordsData?[wordKeys?[index] ?? ""]
+        wordInfoView.configureView(title: wordKeys?[index].capitalizingFirstLetter() ?? "", meaning:  wordsData?[wordKeys?[index] ?? ""] ?? "")
         wordInfoView.containerView.backgroundColor = colourSet[Int.random(in: 0..<colourSet.count)]
         return wordInfoView
     }
@@ -79,9 +79,5 @@ extension  BaseLineViewController:  KolodaViewDelegate, KolodaViewDataSource {
     func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
         return .fast
     }
-    
-    //    func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
-    //        return Bundle.main.loadNibNamed("OverlayView", owner: self, options: nil)?[0] as? OverlayView
-    //    }
 }
 

@@ -11,6 +11,10 @@
 		2FAC8C2C3517CCE1D070E2ED /* Pods_VocabularyCardsDebug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB166169C77BF716B21BD7C /* Pods_VocabularyCardsDebug.framework */; };
 		4A561BC5B43DA1F17952BFCB /* Pods_VocabularyCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C45748E687FE0281AC0BA5 /* Pods_VocabularyCards.framework */; };
 		6582FAF694CA288266EB0DBD /* Pods_VocabularyCards_VocabularyCardsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA463DD07921EA59CE2F4267 /* Pods_VocabularyCards_VocabularyCardsUITests.framework */; };
+		923F432F251547ED00D9142C /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F432E251547ED00D9142C /* RealmHelper.swift */; };
+		923F4330251547ED00D9142C /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F432E251547ED00D9142C /* RealmHelper.swift */; };
+		923F433C2515481800D9142C /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F433B2515481800D9142C /* Word.swift */; };
+		923F433D2515481800D9142C /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F433B2515481800D9142C /* Word.swift */; };
 		925AB61725129AFC0076819F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925AB61625129AFC0076819F /* AppDelegate.swift */; };
 		925AB61925129AFC0076819F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925AB61825129AFC0076819F /* SceneDelegate.swift */; };
 		925AB61B25129AFC0076819F /* BaseLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925AB61A25129AFC0076819F /* BaseLineViewController.swift */; };
@@ -108,6 +112,8 @@
 		4FC62F717C15578190560AA9 /* Pods-VocabularyCardsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VocabularyCardsTests.release.xcconfig"; path = "Target Support Files/Pods-VocabularyCardsTests/Pods-VocabularyCardsTests.release.xcconfig"; sourceTree = "<group>"; };
 		8275404FE7B23F1EEE8B3398 /* Pods-VocabularyCards-VocabularyCardsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VocabularyCards-VocabularyCardsUITests.debug.xcconfig"; path = "Target Support Files/Pods-VocabularyCards-VocabularyCardsUITests/Pods-VocabularyCards-VocabularyCardsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8AB166169C77BF716B21BD7C /* Pods_VocabularyCardsDebug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VocabularyCardsDebug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		923F432E251547ED00D9142C /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		923F433B2515481800D9142C /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		925AB61325129AFC0076819F /* VocabularyCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocabularyCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		925AB61625129AFC0076819F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		925AB61825129AFC0076819F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +206,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		923F432D251547C700D9142C /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				923F4339251547F500D9142C /* Entity */,
+				923F432E251547ED00D9142C /* RealmHelper.swift */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		923F4339251547F500D9142C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				923F433B2515481800D9142C /* Word.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		925AB60A25129AFC0076819F = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +249,7 @@
 		925AB61525129AFC0076819F /* VocabularyCards */ = {
 			isa = PBXGroup;
 			children = (
+				923F432D251547C700D9142C /* DataBase */,
 				927F08C32512A6BB00FDE8E4 /* DelegateFiles */,
 				925AB62125129AFF0076819F /* LaunchScreen.storyboard */,
 				927F08C42512A6D800FDE8E4 /* Presenter */,
@@ -788,7 +812,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923F433C2515481800D9142C /* Word.swift in Sources */,
 				92D6B4222512AD15001C7318 /* WordInfoView.swift in Sources */,
+				923F432F251547ED00D9142C /* RealmHelper.swift in Sources */,
 				925AB61B25129AFC0076819F /* BaseLineViewController.swift in Sources */,
 				929002BA2512D7B700A9BED8 /* SettingsTableViewCell.swift in Sources */,
 				929002B62512D4D800A9BED8 /* SettingsViewController.swift in Sources */,
@@ -829,7 +855,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923F433D2515481800D9142C /* Word.swift in Sources */,
 				92D6B4232512AD15001C7318 /* WordInfoView.swift in Sources */,
+				923F4330251547ED00D9142C /* RealmHelper.swift in Sources */,
 				925AB64825129BBC0076819F /* BaseLineViewController.swift in Sources */,
 				929002BB2512D7B700A9BED8 /* SettingsTableViewCell.swift in Sources */,
 				929002B72512D4D800A9BED8 /* SettingsViewController.swift in Sources */,

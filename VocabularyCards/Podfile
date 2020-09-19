@@ -4,6 +4,7 @@
 def available_pods
 pod "Koloda", '5.0.1'
 pod 'lottie-ios'
+pod 'RealmSwift'
 end
 
 target 'VocabularyCards' do

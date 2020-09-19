@@ -28,51 +28,27 @@ class WordInfoView: UIView {
             likeView.contentMode = .scaleAspectFill
         }
     }
-    @IBOutlet weak var wordLabel: UILabel! {
+    
+    @IBOutlet weak var titleTextField: UITextView! {
         didSet {
-            if #available(iOS 13.0, *) {
-                if self.traitCollection.userInterfaceStyle == .dark {
-                    wordLabel.textColor = .black
-                } else {
-                    wordLabel.textColor = .black
-                }
-            }
+            titleTextField.backgroundColor = .clear
         }
     }
-    
-    @IBOutlet weak var meaningLabel: UILabel! {
+    @IBOutlet weak var meaningTextField: UITextView! {
         didSet {
-            if #available(iOS 13.0, *) {
-                if self.traitCollection.userInterfaceStyle == .dark {
-                    meaningLabel.textColor = .black
-                } else {
-                    meaningLabel.textColor = .black
-                }
-            }
+            meaningTextField.textAlignment = .center
+            meaningTextField.backgroundColor = .clear
         }
     }
-    
+
     // MARK: - IBAction
     @IBAction func likeViewAction(_ sender: UITapGestureRecognizer) {
-        if isButtonSelected == true {
-            animationStartStop = .stop
-            isButtonSelected = false
-            likeView.play(fromFrame: animationStartStop.rawValue.startFrame, toFrame: animationStartStop.rawValue.endFrame, loopMode: .playOnce, completion: {_ in
-                /// - TODO: Add to dataBase
-            })
-
-        } else {
-            isButtonSelected = true
-            animationStartStop = .start
-            likeView.play(fromFrame: animationStartStop.rawValue.startFrame, toFrame: animationStartStop.rawValue.endFrame, loopMode: .playOnce, completion: { _ in
-                /// - TODO: remove from dataBase
-            })
-        }
+        animateLikeView()
     }
     
     
     @IBAction func speakButtonAction(_ sender: UIButton) {
-        let speechUtterance = AVSpeechUtterance(string: wordLabel.text ?? "")
+        let speechUtterance = AVSpeechUtterance(string: titleTextField.text ?? "")
         speechUtterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
         self.speechSynthesizer.speak(speechUtterance)
     }
@@ -108,4 +84,39 @@ class WordInfoView: UIView {
         super.init(frame: CGRect.zero)
         layer.cornerRadius = 10
     }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        animateLikeView()
+    }
+    
+    func configureView(title: String, meaning: String) {
+        titleTextField.text = title
+        meaningTextField.text = meaning
+        isButtonSelected = RealmHelper.shared.getWord(byTitle: title).bool
+        animationStartStop = isButtonSelected == true ? .start : .stop
+        likeView.play(fromFrame: animationStartStop.rawValue.startFrame, toFrame: animationStartStop.rawValue.endFrame, loopMode: .playOnce, completion: nil)
+    }
+    
+    
+    func animateLikeView() {
+        if isButtonSelected == true {
+            guard let title = titleTextField.text, title.isEmpty == false else {return}
+            animationStartStop = .stop
+            isButtonSelected = false
+            likeView.play(fromFrame: animationStartStop.rawValue.startFrame, toFrame: animationStartStop.rawValue.endFrame, loopMode: .playOnce, completion: {_ in
+                RealmHelper.shared.delete(word: title)
+            })
+            
+        } else {
+            guard let title = titleTextField.text, title.isEmpty == false else {return}
+            RealmHelper.shared.addToRealm(word: title)
+            isButtonSelected = true
+            animationStartStop = .start
+            likeView.play(fromFrame: animationStartStop.rawValue.startFrame, toFrame: animationStartStop.rawValue.endFrame, loopMode: .playOnce, completion: { _ in
+                RealmHelper.shared.addToRealm(word: title)
+            })
+        }
+    }
+
 }
