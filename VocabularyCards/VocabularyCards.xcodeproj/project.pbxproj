@@ -11,6 +11,8 @@
 		2FAC8C2C3517CCE1D070E2ED /* Pods_VocabularyCardsDebug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB166169C77BF716B21BD7C /* Pods_VocabularyCardsDebug.framework */; };
 		4A561BC5B43DA1F17952BFCB /* Pods_VocabularyCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C45748E687FE0281AC0BA5 /* Pods_VocabularyCards.framework */; };
 		6582FAF694CA288266EB0DBD /* Pods_VocabularyCards_VocabularyCardsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA463DD07921EA59CE2F4267 /* Pods_VocabularyCards_VocabularyCardsUITests.framework */; };
+		9216DA7E251A736E008B7AD9 /* Extension+CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9216DA7D251A736E008B7AD9 /* Extension+CGRect.swift */; };
+		9216DA7F251A736E008B7AD9 /* Extension+CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9216DA7D251A736E008B7AD9 /* Extension+CGRect.swift */; };
 		923F432F251547ED00D9142C /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F432E251547ED00D9142C /* RealmHelper.swift */; };
 		923F4330251547ED00D9142C /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F432E251547ED00D9142C /* RealmHelper.swift */; };
 		923F433C2515481800D9142C /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F433B2515481800D9142C /* Word.swift */; };
@@ -118,6 +120,7 @@
 		4FC62F717C15578190560AA9 /* Pods-VocabularyCardsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VocabularyCardsTests.release.xcconfig"; path = "Target Support Files/Pods-VocabularyCardsTests/Pods-VocabularyCardsTests.release.xcconfig"; sourceTree = "<group>"; };
 		8275404FE7B23F1EEE8B3398 /* Pods-VocabularyCards-VocabularyCardsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VocabularyCards-VocabularyCardsUITests.debug.xcconfig"; path = "Target Support Files/Pods-VocabularyCards-VocabularyCardsUITests/Pods-VocabularyCards-VocabularyCardsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8AB166169C77BF716B21BD7C /* Pods_VocabularyCardsDebug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VocabularyCardsDebug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9216DA7D251A736E008B7AD9 /* Extension+CGRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+CGRect.swift"; sourceTree = "<group>"; };
 		923F432E251547ED00D9142C /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		923F433B2515481800D9142C /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		925AB61325129AFC0076819F /* VocabularyCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocabularyCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -434,6 +437,7 @@
 			isa = PBXGroup;
 			children = (
 				92D6B42B2512AF78001C7318 /* Extension+UIViiew.swift */,
+				9216DA7D251A736E008B7AD9 /* Extension+CGRect.swift */,
 				929002B12512CA9700A9BED8 /* Extension+String.swift */,
 			);
 			path = Extensions;
@@ -845,6 +849,7 @@
 				925AB61725129AFC0076819F /* AppDelegate.swift in Sources */,
 				92FF8E4E251A4557009B9F0C /* CommonMethods.swift in Sources */,
 				925AB61925129AFC0076819F /* SceneDelegate.swift in Sources */,
+				9216DA7E251A736E008B7AD9 /* Extension+CGRect.swift in Sources */,
 				929002C72512F64A00A9BED8 /* VocabularyCardsViewController.swift in Sources */,
 				92D6B42C2512AF78001C7318 /* Extension+UIViiew.swift in Sources */,
 				92FF8E46251A31D7009B9F0C /* LikedWordsViewController.swift in Sources */,
@@ -891,6 +896,7 @@
 				925AB64925129BBC0076819F /* AppDelegate.swift in Sources */,
 				92FF8E4F251A4557009B9F0C /* CommonMethods.swift in Sources */,
 				925AB64A25129BBC0076819F /* SceneDelegate.swift in Sources */,
+				9216DA7F251A736E008B7AD9 /* Extension+CGRect.swift in Sources */,
 				929002C82512F64A00A9BED8 /* VocabularyCardsViewController.swift in Sources */,
 				92D6B42D2512AF78001C7318 /* Extension+UIViiew.swift in Sources */,
 				92FF8E47251A31D7009B9F0C /* LikedWordsViewController.swift in Sources */,

@@ -20,6 +20,7 @@ class BaseLineViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var menuButton: UIButton!
     
     @IBAction func revertButton(_ sender: UIButton) {
         kolodaView.revertAction()
@@ -65,6 +66,7 @@ class BaseLineViewController: UIViewController {
 extension  BaseLineViewController:  KolodaViewDelegate, KolodaViewDataSource {
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         let wordInfoView: WordInfoView = .fromNib()
+        wordInfoView.delegate = self
         wordInfoView.configureView(title: wordKeys?[index].capitalizingFirstLetter() ?? "", meaning:  wordsData?[wordKeys?[index] ?? ""] ?? "")
         wordInfoView.containerView.backgroundColor = colourSet[Int.random(in: 0..<colourSet.count)]
         return wordInfoView
@@ -80,3 +82,25 @@ extension  BaseLineViewController:  KolodaViewDelegate, KolodaViewDataSource {
     }
 }
 
+// MARK: WordInfoViewProtocol
+extension  BaseLineViewController: WordInfoViewProtocol {
+    func didLikeWord(frame: CGRect) {
+        let imageView = UIImageView(image: UIImage(named: "heartIcon"))
+        imageView.frame = CGRect(x: frame.minX, y: frame.minY, width: 20, height: 20)
+        imageView.center = frame.center
+        imageView.contentMode = .scaleAspectFit
+        imageView.layer.masksToBounds = true
+        view.addSubview(imageView)
+        self.menuButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+        UIView.animate(withDuration: 0.8, delay: 0.5, usingSpringWithDamping: 2, initialSpringVelocity: 1, options: [.curveEaseIn]) {
+            guard let menuButtonCenter = self.menuButton.globalFrame?.center else {return}
+            imageView.center = menuButtonCenter
+            self.menuButton.transform = .identity
+        } completion: { (bool) in
+            if bool {
+                imageView.removeFromSuperview()
+            }
+        }
+    }
+    
+}

@@ -11,6 +11,10 @@ import UIKit
 import AVFoundation
 import Lottie
 
+protocol WordInfoViewProtocol: class {
+    func didLikeWord(frame: CGRect)
+}
+
 class WordInfoView: UIView {
     
     // MARK: - IBOutlet
@@ -44,6 +48,10 @@ class WordInfoView: UIView {
     // MARK: - IBAction
     @IBAction func likeViewAction(_ sender: UITapGestureRecognizer) {
         generateImpactFeedBack()
+        if isButtonSelected == false {
+            guard let likeViewFrame =  self.likeView.globalFrame else {return}
+            self.delegate?.didLikeWord(frame: likeViewFrame)
+        }
         animateLikeView()
     }
     
@@ -58,6 +66,7 @@ class WordInfoView: UIView {
     // MARK: - Parameters
     let speechSynthesizer = AVSpeechSynthesizer()
     var isButtonSelected: Bool = false
+    weak var delegate: WordInfoViewProtocol?
     
     enum AnimationStartStopValues {
         case start
