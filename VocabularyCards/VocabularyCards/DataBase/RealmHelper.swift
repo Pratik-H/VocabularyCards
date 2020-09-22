@@ -18,10 +18,11 @@ class RealmHelper {
     private let realm = try! Realm()
     
     // MARK: - Methods
-    func addToRealm(word: String) {
+    func addToRealm(word: String, meaning: String) {
         if realm.objects(Word.self).filter({$0.word == word}).count == 0 {
             let newWord = Word()
             newWord.word = word
+            newWord.meaning = meaning
             do {
                 try realm.write {
                     realm.add(newWord)

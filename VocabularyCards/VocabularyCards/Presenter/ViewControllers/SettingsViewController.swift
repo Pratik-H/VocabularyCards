@@ -23,7 +23,7 @@ class SettingsViewController: VocabularyCardsViewController {
     }
     
     // MARK: - Parameters
-    let cellTitles: [String] = ["About", "Licenses"]
+    let cellTitles: [String] = ["Liked Cards", "About", "Licenses"]
     
     // MARK: - Methods
     override func viewDidLoad() {
@@ -43,10 +43,10 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let infoViewController = storyboard?.instantiateViewController(identifier: "InfoViewController") as? InfoViewController else {return}
+        
         switch cellTitles[indexPath.row] {
             case "About":
-                
+                guard let infoViewController = storyboard?.instantiateViewController(identifier: "InfoViewController") as? InfoViewController else {return}
                 infoViewController.infotext = """
             About
             
@@ -55,7 +55,9 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
             
             https://github.com/Pratik-H/VocabularyCards.git
             """
+                navigationController?.pushViewController(infoViewController, animated: true)
             case "Licenses":
+                guard let infoViewController = storyboard?.instantiateViewController(identifier: "InfoViewController") as? InfoViewController else {return}
                 infoViewController.infotext = """
             VocabularyCards
             
@@ -302,17 +304,13 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
             OTHER DEALINGS IN THE FONT SOFTWARE.
             
             """
+                navigationController?.pushViewController(infoViewController, animated: true)
+            case "Liked Cards":
+                guard let likedViewController = storyboard?.instantiateViewController(identifier: "LikedWordsViewController") as? LikedWordsViewController else {return}
+                navigationController?.pushViewController(likedViewController, animated: true)
             default:
                 break
         }
-        
-        navigationController?.pushViewController(infoViewController, animated: true)
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.transform = CGAffineTransform(scaleX: -0.8, y: 0.8)
-        UIView.animate(withDuration: 1, delay: 0, options: [.curveEaseIn], animations: {
-            cell.transform = CGAffineTransform.identity
-        }, completion: nil)
-    }
 }

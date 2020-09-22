@@ -73,6 +73,8 @@
 		929002D02512F81400A9BED8 /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 929002CC2512F81400A9BED8 /* Lobster-Regular.ttf */; };
 		929002D12512F81400A9BED8 /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 929002CC2512F81400A9BED8 /* Lobster-Regular.ttf */; };
 		929002D22512F81400A9BED8 /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 929002CC2512F81400A9BED8 /* Lobster-Regular.ttf */; };
+		929897D7251A2D4700FD986C /* LikeWordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929897D6251A2D4700FD986C /* LikeWordTableViewCell.swift */; };
+		929897D8251A2D4700FD986C /* LikeWordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929897D6251A2D4700FD986C /* LikeWordTableViewCell.swift */; };
 		92D151E6251531D2008D75DE /* Like.json in Resources */ = {isa = PBXBuildFile; fileRef = 92D151E5251531D1008D75DE /* Like.json */; };
 		92D151E7251531D2008D75DE /* Like.json in Resources */ = {isa = PBXBuildFile; fileRef = 92D151E5251531D1008D75DE /* Like.json */; };
 		92D6B4222512AD15001C7318 /* WordInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D6B4212512AD15001C7318 /* WordInfoView.swift */; };
@@ -87,6 +89,10 @@
 		92D6B4312512B613001C7318 /* WordDataBase.json in Resources */ = {isa = PBXBuildFile; fileRef = 92D6B4302512B613001C7318 /* WordDataBase.json */; };
 		92D6B4322512B613001C7318 /* WordDataBase.json in Resources */ = {isa = PBXBuildFile; fileRef = 92D6B4302512B613001C7318 /* WordDataBase.json */; };
 		92D6B4332512B613001C7318 /* WordDataBase.json in Resources */ = {isa = PBXBuildFile; fileRef = 92D6B4302512B613001C7318 /* WordDataBase.json */; };
+		92FF8E46251A31D7009B9F0C /* LikedWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FF8E45251A31D7009B9F0C /* LikedWordsViewController.swift */; };
+		92FF8E47251A31D7009B9F0C /* LikedWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FF8E45251A31D7009B9F0C /* LikedWordsViewController.swift */; };
+		92FF8E4E251A4557009B9F0C /* CommonMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FF8E4D251A4557009B9F0C /* CommonMethods.swift */; };
+		92FF8E4F251A4557009B9F0C /* CommonMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FF8E4D251A4557009B9F0C /* CommonMethods.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,11 +151,14 @@
 		929002C62512F64A00A9BED8 /* VocabularyCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyCardsViewController.swift; sourceTree = "<group>"; };
 		929002CB2512F81400A9BED8 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		929002CC2512F81400A9BED8 /* Lobster-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster-Regular.ttf"; sourceTree = "<group>"; };
+		929897D6251A2D4700FD986C /* LikeWordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LikeWordTableViewCell.swift; path = VocabularyCards/Presenter/TableViewCells/LikeWordTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		92D151E5251531D1008D75DE /* Like.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Like.json; sourceTree = "<group>"; };
 		92D6B4212512AD15001C7318 /* WordInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordInfoView.swift; sourceTree = "<group>"; };
 		92D6B4252512AD1D001C7318 /* WordInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordInfoView.xib; sourceTree = "<group>"; };
 		92D6B42B2512AF78001C7318 /* Extension+UIViiew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViiew.swift"; sourceTree = "<group>"; };
 		92D6B4302512B613001C7318 /* WordDataBase.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = WordDataBase.json; sourceTree = "<group>"; };
+		92FF8E45251A31D7009B9F0C /* LikedWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedWordsViewController.swift; sourceTree = "<group>"; };
+		92FF8E4D251A4557009B9F0C /* CommonMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMethods.swift; sourceTree = "<group>"; };
 		A0579607FFD46FD5DB7164CE /* Pods-VocabularyCardsDebug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VocabularyCardsDebug.release.xcconfig"; path = "Target Support Files/Pods-VocabularyCardsDebug/Pods-VocabularyCardsDebug.release.xcconfig"; sourceTree = "<group>"; };
 		A7A23FF87595D7D7C95C6250 /* Pods-VocabularyCards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VocabularyCards.debug.xcconfig"; path = "Target Support Files/Pods-VocabularyCards/Pods-VocabularyCards.debug.xcconfig"; sourceTree = "<group>"; };
 		B528996E378511079B2C00B5 /* Pods-VocabularyCardsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VocabularyCardsTests.debug.xcconfig"; path = "Target Support Files/Pods-VocabularyCardsTests/Pods-VocabularyCardsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -333,6 +342,7 @@
 				925AB61A25129AFC0076819F /* BaseLineViewController.swift */,
 				929002BD2512D92200A9BED8 /* InfoViewController.swift */,
 				929002B52512D4D800A9BED8 /* SettingsViewController.swift */,
+				92FF8E45251A31D7009B9F0C /* LikedWordsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -342,6 +352,7 @@
 			children = (
 				929002C12512F32000A9BED8 /* SettingsTableFooterView.swift */,
 				929002B92512D7B700A9BED8 /* SettingsTableViewCell.swift */,
+				929897D6251A2D4700FD986C /* LikeWordTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -413,6 +424,7 @@
 		92D6B4292512AF62001C7318 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				92FF8E4C251A4544009B9F0C /* Common */,
 				92D6B42A2512AF67001C7318 /* Extensions */,
 			);
 			path = Utilities;
@@ -434,6 +446,14 @@
 				92D6B4302512B613001C7318 /* WordDataBase.json */,
 			);
 			path = JSONData;
+			sourceTree = "<group>";
+		};
+		92FF8E4C251A4544009B9F0C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				92FF8E4D251A4557009B9F0C /* CommonMethods.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		9A3B9098E0DDB56C93ECC9CD /* Pods */ = {
@@ -816,15 +836,18 @@
 				92D6B4222512AD15001C7318 /* WordInfoView.swift in Sources */,
 				923F432F251547ED00D9142C /* RealmHelper.swift in Sources */,
 				925AB61B25129AFC0076819F /* BaseLineViewController.swift in Sources */,
+				929897D7251A2D4700FD986C /* LikeWordTableViewCell.swift in Sources */,
 				929002BA2512D7B700A9BED8 /* SettingsTableViewCell.swift in Sources */,
 				929002B62512D4D800A9BED8 /* SettingsViewController.swift in Sources */,
 				929002BE2512D92200A9BED8 /* InfoViewController.swift in Sources */,
 				929002C22512F32000A9BED8 /* SettingsTableFooterView.swift in Sources */,
 				929002B22512CA9700A9BED8 /* Extension+String.swift in Sources */,
 				925AB61725129AFC0076819F /* AppDelegate.swift in Sources */,
+				92FF8E4E251A4557009B9F0C /* CommonMethods.swift in Sources */,
 				925AB61925129AFC0076819F /* SceneDelegate.swift in Sources */,
 				929002C72512F64A00A9BED8 /* VocabularyCardsViewController.swift in Sources */,
 				92D6B42C2512AF78001C7318 /* Extension+UIViiew.swift in Sources */,
+				92FF8E46251A31D7009B9F0C /* LikedWordsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -859,15 +882,18 @@
 				92D6B4232512AD15001C7318 /* WordInfoView.swift in Sources */,
 				923F4330251547ED00D9142C /* RealmHelper.swift in Sources */,
 				925AB64825129BBC0076819F /* BaseLineViewController.swift in Sources */,
+				929897D8251A2D4700FD986C /* LikeWordTableViewCell.swift in Sources */,
 				929002BB2512D7B700A9BED8 /* SettingsTableViewCell.swift in Sources */,
 				929002B72512D4D800A9BED8 /* SettingsViewController.swift in Sources */,
 				929002BF2512D92200A9BED8 /* InfoViewController.swift in Sources */,
 				929002C32512F32000A9BED8 /* SettingsTableFooterView.swift in Sources */,
 				929002B32512CA9700A9BED8 /* Extension+String.swift in Sources */,
 				925AB64925129BBC0076819F /* AppDelegate.swift in Sources */,
+				92FF8E4F251A4557009B9F0C /* CommonMethods.swift in Sources */,
 				925AB64A25129BBC0076819F /* SceneDelegate.swift in Sources */,
 				929002C82512F64A00A9BED8 /* VocabularyCardsViewController.swift in Sources */,
 				92D6B42D2512AF78001C7318 /* Extension+UIViiew.swift in Sources */,
+				92FF8E47251A31D7009B9F0C /* LikedWordsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

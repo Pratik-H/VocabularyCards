@@ -42,8 +42,7 @@ class BaseLineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadWords()
-        print(RealmHelper.shared.getWords().map{$0.word})
-        self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
+        
     }
     
     private func loadWords() {

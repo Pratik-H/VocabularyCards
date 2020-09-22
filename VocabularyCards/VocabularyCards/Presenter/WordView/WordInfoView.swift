@@ -43,6 +43,7 @@ class WordInfoView: UIView {
 
     // MARK: - IBAction
     @IBAction func likeViewAction(_ sender: UITapGestureRecognizer) {
+        generateImpactFeedBack()
         animateLikeView()
     }
     
@@ -109,12 +110,12 @@ class WordInfoView: UIView {
             })
             
         } else {
-            guard let title = titleTextField.text, title.isEmpty == false else {return}
-            RealmHelper.shared.addToRealm(word: title)
+            guard let title = titleTextField.text, title.isEmpty == false,
+                  let meaning = meaningTextField.text, meaning.isEmpty == false else {return}
             isButtonSelected = true
             animationStartStop = .start
             likeView.play(fromFrame: animationStartStop.rawValue.startFrame, toFrame: animationStartStop.rawValue.endFrame, loopMode: .playOnce, completion: { _ in
-                RealmHelper.shared.addToRealm(word: title)
+                RealmHelper.shared.addToRealm(word: title, meaning: meaning)
             })
         }
     }
