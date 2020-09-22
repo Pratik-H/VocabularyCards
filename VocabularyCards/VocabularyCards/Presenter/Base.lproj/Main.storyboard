@@ -398,7 +398,7 @@
                                             <constraints>
                                                 <constraint firstItem="IQf-aw-zm0" firstAttribute="leading" secondItem="WVi-6g-q7g" secondAttribute="leading" id="N7P-F1-nwI"/>
                                                 <constraint firstItem="IQf-aw-zm0" firstAttribute="top" secondItem="WVi-6g-q7g" secondAttribute="top" id="XG4-cY-U2W"/>
-                                                <constraint firstAttribute="bottom" secondItem="IQf-aw-zm0" secondAttribute="bottom" id="Xod-A8-uUQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="IQf-aw-zm0" secondAttribute="bottom" priority="999" id="Xod-A8-uUQ"/>
                                                 <constraint firstAttribute="trailing" secondItem="IQf-aw-zm0" secondAttribute="trailing" id="j1s-d1-pgs"/>
                                             </constraints>
                                         </tableViewCellContentView>

@@ -90,15 +90,11 @@ extension LikedWordsViewController: UITableViewDelegate, UITableViewDataSource {
             generateImpactFeedBack(style: .medium)
             RealmHelper.shared.delete(word: likedWords[indexPath.row].word)
             likedWords.remove(at: indexPath.row)
-            UIView.animate(
-                withDuration: 0.7,
-                delay: 0.05 * Double(indexPath.row),
-                animations: {
-                    self.tableView.reloadData()
-                    self.wordKolodaView.reloadData()
-                })
-            
-            
+            if (indexPath.row - 1) < 0 {
+                tableView.deleteRows(at: [IndexPath(row: 0, section: indexPath.section)], with: .fade)
+            } else {
+                tableView.deleteRows(at: [IndexPath(row: indexPath.row, section: indexPath.section)], with: .fade)
+            }
         }
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

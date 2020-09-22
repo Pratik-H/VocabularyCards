@@ -26,7 +26,7 @@ class RealmHelper {
             do {
                 try realm.write {
                     realm.add(newWord)
-                    print("saved")
+                    print("\(word) saved")
                 }
             } catch {
                 print(error)
@@ -40,7 +40,7 @@ class RealmHelper {
         do {
             try realm.write {
                 realm.delete(wordObject)
-                print("deleted")
+                print("\(word) deleted")
             }
         } catch {
             print(error)
